@@ -18,9 +18,9 @@ public class Lesson1_2Task7 {
         int programmers = sc.nextInt();
 
         if (programmers % 10 == 1 && !(programmers % 100 == 11)) { //check that ends on ...1 but not ....11
-            System.out.println(programmers + "программист");
+            System.out.println(programmers + " программист");
         } else if ((programmers % 10 > 1 && programmers % 10 < 5) && !(programmers % 100 > 10 && programmers % 100 < 15)) { //check that ends on 2,3,4 but not 11,12,13,14
-            System.out.println(programmers + "программиста");
-        } else System.out.println(programmers + "программистов");
+            System.out.println(programmers + " программиста");
+        } else System.out.println(programmers + " программистов");
     }
 }

@@ -6,6 +6,17 @@ import java.util.Scanner;
  * Даны 3 целых числа. Найти количество положительных и отрицательных чисел в исходном наборе
  */
 public class Lesson1_2Task5 {
+    static int positiveNumbersCounter = 0;
+    static int negativeNumbersCounter = 0;
+
+    public  static void getNumberOfPositiveAndNegativeNumbers(int currentNumber) {
+        if (currentNumber > 0) {
+            positiveNumbersCounter++;
+        } else if (currentNumber != 0) {
+            negativeNumbersCounter++;
+        }
+    }
+
     public static void main(String[] args) {
         int firstIntNumber, secondIntNumber, thirdIntNumber;
         Scanner sc = new Scanner(System.in);
@@ -13,38 +24,30 @@ public class Lesson1_2Task5 {
         firstIntNumber = sc.nextInt();
         secondIntNumber = sc.nextInt();
         thirdIntNumber = sc.nextInt();
-        int counterOfPositiveNumbers = 0;
-        int counterOfNegativeNumbers = 0;
 
-        //maybe need to do one method because actions are repeated
-        if (firstIntNumber > 0) counterOfPositiveNumbers++;
-        else if (firstIntNumber != 0) counterOfNegativeNumbers++;
+        getNumberOfPositiveAndNegativeNumbers(firstIntNumber);
+        getNumberOfPositiveAndNegativeNumbers(secondIntNumber);
+        getNumberOfPositiveAndNegativeNumbers(thirdIntNumber);
 
-        if (secondIntNumber > 0) counterOfPositiveNumbers++;
-        else if (secondIntNumber != 0) counterOfNegativeNumbers++;
-
-        if (thirdIntNumber > 0) counterOfPositiveNumbers++;
-        else if (thirdIntNumber != 0) counterOfNegativeNumbers++;
-
-        System.out.println("There are " + counterOfPositiveNumbers + " positive numbers in your list");
-        System.out.println("There are " + counterOfNegativeNumbers + " negative numbers in your list");
+        System.out.println("There are " + positiveNumbersCounter + " positive numbers in your list");
+        System.out.println("There are " + negativeNumbersCounter + " negative numbers in your list");
 
         //with array
             /*int numbers[] = new int[3];
-            int counterOfPositiveNumbers=0;
-            int counterOfNegativeNumbers=0;
+            int positiveNumbersCounter = 0;
+            int negativeNumbersCounter = 0;
             System.out.println("Enter 3 numbers: ");
             for (int i = 0; i < numbers.length; ++i) {
                 Scanner sc = new Scanner(System.in);
                 numbers[i] = sc.nextInt();
-                if(numbers[i]>0) {
-                    counterOfPositiveNumbers++;
+                if(numbers[i] > 0) {
+                    positiveNumbersCounter++;
                 }
-                else if(numbers[i]!=0 ) {
-                    counterOfNegativeNumbers++;
+                else if(numbers[i] != 0 ) {
+                    negativeNumbersCounter++;
                 }
             }
-            System.out.println("There are "+ counterOfPositiveNumbers + " positive numbers in your list");
-            System.out.println("There are "+ counterOfNegativeNumbers + " negative numbers in your list");*/
+            System.out.println("There are "+ positiveNumbersCounter + " positive numbers in your list");
+            System.out.println("There are "+ negativeNumbersCounter + " negative numbers in your list");*/
     }
 }

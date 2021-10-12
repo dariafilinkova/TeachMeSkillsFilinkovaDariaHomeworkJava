@@ -16,6 +16,7 @@ public  class Lesson1_2Task1 {
         int currentNumber = sc.nextInt();
         int tmpNumber = currentNumber;
         int countOfDigits = 0;
+
         if (currentNumber == 0) countOfDigits++;
         while (currentNumber != 0) {
             countOfDigits++;

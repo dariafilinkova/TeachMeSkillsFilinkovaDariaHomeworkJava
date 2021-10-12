@@ -13,24 +13,25 @@ public class Lesson1_2Task4 {
         firstIntNumber = sc.nextInt();
         secondIntNumber = sc.nextInt();
         thirdIntNumber = sc.nextInt();
-        int counterOfPositiveNumbers = 0;
+        int positiveNumbersCounter = 0;
 
-        if (firstIntNumber > 0) counterOfPositiveNumbers++;
-        if (secondIntNumber > 0) counterOfPositiveNumbers++;
-        if (thirdIntNumber > 0) counterOfPositiveNumbers++;
-        System.out.println("Number of positive numbers " + counterOfPositiveNumbers);
+        if (firstIntNumber > 0) positiveNumbersCounter++;
+        if (secondIntNumber > 0) positiveNumbersCounter++;
+        if (thirdIntNumber > 0) positiveNumbersCounter++;
+
+        System.out.println("Number of positive numbers " + positiveNumbersCounter);
 
         //with array
             /*int numbers[] = new int[3];
-            int counterOfPositiveNumbers=0;
+            int positiveNumbersCounter = 0;
             System.out.println("Enter 3 numbers: ");
             for (int i = 0; i < numbers.length; ++i) {
                 Scanner sc = new Scanner(System.in);
                 numbers[i] = sc.nextInt();
-                if(numbers[i]>0) {
-                    counterOfPositiveNumbers++;
+                if(numbers[i] > 0) {
+                    positiveNumbersCounter++;
                 }
              }
-            System.out.println(counterOfPositiveNumbers);*/
+            System.out.println(positiveNumbersCounter);*/
     }
 }

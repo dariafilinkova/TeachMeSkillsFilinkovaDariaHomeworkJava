@@ -23,11 +23,11 @@ public class Lesson1_2Task2 {
         System.out.println("Enter the 3-st side c of triangle :");
         int thirdSideOfTriangle = sc.nextInt();
 
-        if (firstSideOfTriangle >= secondSideOfTriangle + thirdSideOfTriangle || secondSideOfTriangle >= firstSideOfTriangle + thirdSideOfTriangle || thirdSideOfTriangle >= firstSideOfTriangle + secondSideOfTriangle) {
+        if (firstSideOfTriangle >= secondSideOfTriangle + thirdSideOfTriangle ||
+                secondSideOfTriangle >= firstSideOfTriangle + thirdSideOfTriangle || thirdSideOfTriangle >=
+                firstSideOfTriangle + secondSideOfTriangle) {
             System.out.println("Such triangle doesn't exist");
         } else
             System.out.println("Such triangle exists");
-
     }
-
 }
