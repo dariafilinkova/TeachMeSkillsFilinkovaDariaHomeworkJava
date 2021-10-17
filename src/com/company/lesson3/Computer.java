@@ -1,4 +1,4 @@
-package company;
+package com.company.lesson3;
 
 import java.util.Objects;
 import java.util.Random;
