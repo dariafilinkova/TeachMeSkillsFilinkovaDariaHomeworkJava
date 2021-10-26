@@ -61,7 +61,7 @@ public class Computer {
     }
 
     public void turnOn() {
-        if (isReadyForWorking() == true) {
+        if (isReadyForWorking()) {
             if (fullCycleResource != 0) {
                 Random random = new Random();
                 int guessedNumber = random.nextInt(2);
@@ -74,11 +74,11 @@ public class Computer {
                     while (userNumber != 0 && userNumber != 1) {
                         fullCycleResource--;
                         System.out.println("You have " + fullCycleResource + " resources");
-                        if (checkFullCycleResource() == false) break;
+                        if (!checkFullCycleResource()) break;
                         System.out.println("Please enter only 0 or 1");
                         userNumber = sc.nextInt();
                     }
-                    if (checkFullCycleResource() == false) break;
+                    if (!checkFullCycleResource()) break;
                     if (userNumber == guessedNumber) {
                         System.out.println("Congratulations! You guess the number. Your computer is on\n");
                         break;
@@ -86,7 +86,7 @@ public class Computer {
                     if (userNumber != guessedNumber) {
                         fullCycleResource--;
                         System.out.println("You have " + fullCycleResource + " resources");
-                        if (checkFullCycleResource() == false) break;
+                        if (!checkFullCycleResource()) break;
                         System.out.println("Ohhh,u didn't guess the number. Next time u'll do it! Try again. Enter number");
                         userNumber = sc.nextInt();
                     }
@@ -105,7 +105,7 @@ public class Computer {
     }
 
     public boolean isReadyForWorking() {
-        if (processor == true && ram == true && hdd == true && fullCycleResource > 0) {
+        if (processor && ram && hdd && fullCycleResource > 0) {
             System.out.println("Your computer is ready for working. You can turn it on!\n");
             return true;
         } else System.out.println("Your computer isn't ready for working. You can't turn it on!\n");
@@ -125,11 +125,11 @@ public class Computer {
                 while (userNumber != 0 && userNumber != 1) {
                     fullCycleResource--;
                     System.out.println("You have " + fullCycleResource + " resources");
-                    if (checkFullCycleResource() == false) break;
+                    if (!checkFullCycleResource()) break;
                     System.out.println("Please enter only 0 or 1");
                     userNumber = sc.nextInt();
                 }
-                if (checkFullCycleResource() == false) break;
+                if (!checkFullCycleResource()) break;
                 if (userNumber == guessedNumber) {
                     System.out.println("Congratulations! You guess the number. Your computer is off\n");
                     break;
@@ -137,7 +137,7 @@ public class Computer {
                 if (userNumber != guessedNumber) {
                     fullCycleResource--;
                     System.out.println("You have " + fullCycleResource + " resources\n");
-                    if (checkFullCycleResource() == false) break;
+                    if (!checkFullCycleResource()) break;
                     System.out.println("Ohhh,u didn't guess the number. Next time u'll do it! Try again. Enter number");
                     userNumber = sc.nextInt();
                 }
