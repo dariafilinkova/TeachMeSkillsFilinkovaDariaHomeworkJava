@@ -32,9 +32,8 @@ public class MilitaryTransport extends AirTransport {
         missilesNumber--;
     }
 
-    public void ejection() {
-        if (hasEjectionSystem) System.out.println("Ejection was successful\n");
-        else System.out.println("You don't have such a system\n");
+    public String ejection() {
+        return (hasEjectionSystem) ? "Ejection was successful\n" : "You don't have such a system\n";
     }
 
 }

@@ -22,7 +22,7 @@ public class Main {
         militaryPlane1.shot();
         militaryPlane1.shot();
         militaryPlane1.shot();
-        militaryPlane1.ejection();
+        System.out.println(militaryPlane1.ejection());
 
     }
 }
