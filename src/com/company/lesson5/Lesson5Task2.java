@@ -9,7 +9,6 @@ public class Lesson5Task2 {
         buildDictionary();
     }
 
-
     public static void buildDictionary() {
         System.out.println("Write string");
         Scanner sc = new Scanner(System.in);
@@ -21,7 +20,6 @@ public class Lesson5Task2 {
             map.put((char) ('A' + i), 0);
             map.put((char) ('a' + i), 0);
         }
-
         for (int i = 0; i < inputString.length(); i++) {
             char ch = inputString.charAt(i);
             if (map.containsKey(ch)) {
